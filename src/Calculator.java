@@ -29,15 +29,13 @@ public class Calculator implements ActionListener {
         textfield.setFont(myFont);
         textfield.setEditable(false);
 
-        addButton = new JButton("+");
-        subButton = new JButton("-");
-        mulButton = new JButton("*");
-        divButton = new JButton("/");
-        decButton = new JButton(".");
-        equButton = new JButton("=");
-        delButton = new JButton("Del");
-        clrButton = new JButton("Clr");
-        negButton = new JButton("+/-");
+        JButton[] buttons = {
+                addButton = new JButton("+"), subButton = new JButton("-"),
+                mulButton = new JButton("*"), divButton = new JButton("/"),
+                decButton = new JButton("."), equButton = new JButton("="),
+                delButton = new JButton("Del"), clrButton = new JButton("Clr"),
+                negButton = new JButton("+/-")
+        };
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
@@ -80,7 +78,6 @@ public class Calculator implements ActionListener {
         panel.add(subButton);
         panel.add(numberButtons[7]);
         panel.add(numberButtons[8]);
-        panel.add(numberButtons[9]);
         panel.add(numberButtons[9]);
         panel.add(mulButton);
         panel.add(decButton);
