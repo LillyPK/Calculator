@@ -106,11 +106,13 @@ public class Calculator implements ActionListener {
 
         for (int i = 0; i < 10; i++) {
             if (e.getSource() == numberButtons[i]) {
-                textfield.setText(textfield.getText().concat(String.valueOf(i)));
+                textfield.setText(textfield.getText() + i);
+                //original textfield.setText(textfield.getText().concat(String.valueOf(i)));
             }
         }
         if(e.getSource()==decButton){
-            textfield.setText(textfield.getText().concat("."));
+            textfield.setText(textfield.getText() + ".");
+            //original textfield.setText(textfield.getText().concat("."));
         }
         if(e.getSource()==addButton){
             num1 = Double.parseDouble(textfield.getText());
@@ -135,20 +137,28 @@ public class Calculator implements ActionListener {
         if(e.getSource()==equButton){
             num2=Double.parseDouble(textfield.getText());
 
-            switch(operator) {
-                case'+':
-                    result=num1+num2;
-                    break;
-                case'-':
-                    result=num1-num2;
-                    break;
-                case'*':
-                    result=num1*num2;
-                    break;
-                case'/':
-                    result=num1/num2;
-                    break;
-            }
+            //switch(operator) {
+            //    case'+':
+            //        result=num1+num2;
+            //        break;
+            //    case'-':
+            //        result=num1-num2;
+            //        break;
+            //    case'*':
+            //        result=num1*num2;
+            //        break;
+            //    case'/':
+            //        result=num1/num2;
+            //        break;
+            //}
+            result = switch(operator) {
+                case '+' -> num1 + num2;
+                case '-' -> num1 - num2;
+                case '*' -> num1 * num2;
+                case '/' -> num1 / num2;
+                default -> 0;
+            };
+
             textfield.setText(String.valueOf(result));
             num1=result;
         }
