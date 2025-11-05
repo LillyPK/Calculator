@@ -29,13 +29,15 @@ public class Calculator implements ActionListener {
         textfield.setFont(myFont);
         textfield.setEditable(false);
 
-        JButton[] buttons = {
-                addButton = new JButton("+"), subButton = new JButton("-"),
-                mulButton = new JButton("*"), divButton = new JButton("/"),
-                decButton = new JButton("."), equButton = new JButton("="),
-                delButton = new JButton("Del"), clrButton = new JButton("Clr"),
-                negButton = new JButton("+/-")
-        };
+        addButton = new JButton("+");
+        subButton = new JButton("-");
+        mulButton = new JButton("*");
+        divButton = new JButton("/");
+        decButton = new JButton(".");
+        equButton = new JButton("=");
+        delButton = new JButton("Del");
+        clrButton = new JButton("Clr");
+        negButton = new JButton("+/-");
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
@@ -95,7 +97,7 @@ public class Calculator implements ActionListener {
     }
 
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
+        new Calculator();
     }
 
     @Override
