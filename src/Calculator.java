@@ -96,7 +96,7 @@ public class Calculator implements ActionListener {
 
     }
 
-    public static void main(String[] args) {
+    static void main() {
         new Calculator();
     }
 
