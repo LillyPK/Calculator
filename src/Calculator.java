@@ -4,15 +4,22 @@ import java.awt.event.*;
 
 public class Calculator implements ActionListener {
 
-    JFrame frame;
-    JTextField textfield;
-    JButton[] numberButtons = new JButton[10];
-    JButton[] functionButtons = new JButton[9];
-    JButton addButton, subButton, mulButton, divButton;
-    JButton decButton, equButton, delButton, clrButton, negButton;
-    JPanel panel;
+    final JFrame frame;
+    final JTextField textfield;
+    final JButton[] numberButtons = new JButton[10];
+    final JButton[] functionButtons = new JButton[9];
+    final JButton addButton;
+    final JButton subButton;
+    final JButton mulButton;
+    final JButton divButton;
+    final JButton decButton;
+    final JButton equButton;
+    final JButton delButton;
+    final JButton clrButton;
+    final JButton negButton;
+    final JPanel panel;
 
-    Font myFont = new Font("Ink Free", Font.BOLD, 30);
+    final Font myFont = new Font("Ink Free", Font.BOLD, 30);
 
     double num1 = 0, num2 = 0, result = 0;
     char operator;
